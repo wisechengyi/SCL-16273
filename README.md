@@ -1,5 +1,8 @@
-/3rdparty/
+Show the scalafmt plugin can pick up the configuration from `<VCS root>/.scalafmt.conf`
 
-3rdparty dependencies for Pants itself: references to modules whose sources live elsewhere.
-
-If you're looking for references to JVM-based "tool" jars (junit, etc), look in ../BUILD.tools.
+1. In IntelliJ, install scalafmt plugin
+2. File -> Open, select `<VCS root>/examples/`. NOTE: not `<VCS root>`.
+3. Open `WelSpec.scala`
+4. Code -> reformat with scalafmt. Nothing should change.
+5. Change `maxColumn` in `<VCS root>/.scalafmt.conf` from 100 to 20
+6. Repeat step 4. `WelSpec.scala`'s width is changed, showing that `<VCS root>/.scalafmt.conf` was respected.
