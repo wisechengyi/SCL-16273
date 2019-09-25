@@ -1,3 +1,5 @@
-This repository contains the bootstrap needed to get you up and running with pants.
+/3rdparty/
 
-Follow the instructions at https://www.pantsbuild.org/install.
+3rdparty dependencies for Pants itself: references to modules whose sources live elsewhere.
+
+If you're looking for references to JVM-based "tool" jars (junit, etc), look in ../BUILD.tools.
